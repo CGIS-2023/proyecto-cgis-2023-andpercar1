@@ -19,21 +19,15 @@ class MedicamentoSeeder extends Seeder
         DB::table('medicamentos')->insert([
             [
                 'nombre'=> "Ibuprofeno",
-                'precio'=> 23.15,
-                'marca'=> "Apirofeno",
-                'fecha_caducidad'=> "2024-01-01"
+                'miligramos'=> 600
             ],
             [
                 'nombre'=> "Paracetamol",
-                'precio'=> 21.99,
-                'marca'=> "Panadol",
-                'fecha_caducidad'=> "2024-05-20"
+                'miligramos'=> 1000
             ],
             [
                 'nombre'=> "Ilvico",
-                'precio'=> "19.99",
-                'marca'=> "Aristo",
-                'fecha_caducidad'=> "2025-02-18"
+                'miligramos'=> 325
             ],
         ]);
 

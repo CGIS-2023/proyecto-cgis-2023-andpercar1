@@ -17,9 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre');
-            $table->double('precio');
-            $table->string('marca');
-            $table->date('fecha_caducidad');
+            $table->integer('miligramos');
         });
     }
 

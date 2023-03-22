@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MedicamentoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,13 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::middleware(['auth', 'tipo_usuario:3'])->group(function () {
+    Route::get('/medicamentos/index', [MedicamentoController::class, 'index'])->name('medicamentos.index');
+    Route::get('/medicamentos/create', [MedicamentoController::class, 'create'])->name('medicamentos.create');
+    Route::post('/medicamentos', [MedicamentoController::class, 'store'])->name('medicamentos.store');
+    Route::delete('/medicamentos/{medico}', [MedicamentoController::class, 'destroy'])->name('medicos.destroy');
+    Route::resources([
+        'medicamentos' => MedicamentoController::class,
+    ]);
+});

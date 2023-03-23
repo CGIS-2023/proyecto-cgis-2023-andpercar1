@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreMedicamentoRequest;
 use App\Http\Requests\UpdateMedicamentoRequest;
+use Illuminate\Http\Request;
 use App\Models\Medicamento;
 
 class MedicamentoController extends Controller

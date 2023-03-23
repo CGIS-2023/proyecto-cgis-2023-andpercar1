@@ -9,18 +9,14 @@ class Medicamento extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre', 'precio', 'marca', 'fecha_caducidad'];
+    protected $fillable = ['nombre', 'miligramos'];
 
     protected $casts = [
         'fecha_caducidad' => 'datetime:Y-m-d'
     ];
 
-    public function proovedors(){
-        return $this->hasMany(Proovedor::class);
-    }
-
-    public function proovedors(){
-        return $this->hasMany(Proovedor::class);
+    public function proveedors(){
+        return $this->hasMany(Proveedor::class);
     }
 
 }

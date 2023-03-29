@@ -53,7 +53,7 @@ class MedicamentoPolicy
      */
     public function update(User $user, Medicamento $medicamento)
     {
-        //
+        return true;
     }
 
     /**
@@ -65,7 +65,7 @@ class MedicamentoPolicy
      */
     public function delete(User $user, Medicamento $medicamento)
     {
-        //
+        return true;
     }
 
     /**
@@ -77,7 +77,7 @@ class MedicamentoPolicy
      */
     public function restore(User $user, Medicamento $medicamento)
     {
-        //
+        return true;
     }
 
     /**
@@ -89,6 +89,6 @@ class MedicamentoPolicy
      */
     public function forceDelete(User $user, Medicamento $medicamento)
     {
-        //
+        return true;
     }
 }

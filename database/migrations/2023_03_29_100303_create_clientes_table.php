@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('apellidos');
             $table->string('DNI');
             $table->integer('telefono');
-            $table->integer('num_seguridadsocial');
+            $table->biginteger('num_seguridadsocial');
             $table->string('direccion');
         });
     }

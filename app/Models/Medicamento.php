@@ -19,4 +19,8 @@ class Medicamento extends Model
         return $this->hasMany(Proveedor::class);
     }
 
+    public function farmacia(){
+        return $this->belongsTo(Farmacia::class);
+    }
+
 }

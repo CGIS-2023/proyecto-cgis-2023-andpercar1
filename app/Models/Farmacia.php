@@ -14,4 +14,13 @@ class Farmacia extends Model
         'telefono',
         'abierto',
     ];
+
+    public function medicamentos(){
+        return $this->hasMany(Medicamento::class);
+    }
+
+    public function clientes(){
+        return $this->belongsToMany(Cliente::class)->withPivot('codigo_paciente');
+    }
+
 }

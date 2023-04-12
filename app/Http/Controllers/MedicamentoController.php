@@ -12,7 +12,7 @@ class MedicamentoController extends Controller
    
     public function __construct()
     {
-        $this->authorizeResource(Medicamento::class, 'medicamento');
+        $this->authorizeResource(Medicamento::class, 'medicamento'); 
     }
 
     public function index()

@@ -18,17 +18,17 @@ class FarmaciaSeeder extends Seeder
         DB::table('farmacias')->insert([
             [
                 'nombre' => "Farmasalud",
-                'telefono' => "954667453",
+                'telefono' => 954667453,
                 'abierto' => 1
             ],
             [
                 'nombre' => "Botiquín",
-                'telefono' => "954098943",
+                'telefono' => 954098943,
                 'abierto' => 1
             ],
             [
                 'nombre' => "Vitalidad",
-                'telefono' => "954800562",
+                'telefono' => 954800562,
                 'abierto' => 0
             ],
         ]);

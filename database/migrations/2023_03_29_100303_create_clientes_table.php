@@ -13,9 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('farmacias_proveedor', function (Blueprint $table) {
+        Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('DNI');
+            $table->integer('telefono');
+            $table->integer('num_seguridadsocial');
+            $table->string('direccion');
         });
     }
 
@@ -26,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('farmacias_proveedor');
+        Schema::dropIfExists('clientes');
     }
 };

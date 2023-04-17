@@ -34,5 +34,22 @@ class ClienteSeeder extends Seeder
                 'direccion' => "C/Relator,14"
             ],
             ]);
+
+            DB::table('cliente_farmacia')->insert([
+                [
+                    'codigo_paciente' => 00001,
+                    'cliente_id' => 1,
+                    'farmacia_id' => 1,
+                    
+                ],
+                [
+                    'codigo_paciente' => 00002,
+                    'cliente_id' => 2,
+                    'farmacia_id' => 2,
+                    
+                ],
+
+            ]);
+
     }
 }

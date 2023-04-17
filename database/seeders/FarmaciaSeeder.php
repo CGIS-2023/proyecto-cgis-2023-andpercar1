@@ -26,11 +26,7 @@ class FarmaciaSeeder extends Seeder
                 'telefono' => 954098943,
                 'abierto' => 1
             ],
-            [
-                'nombre' => "Vitalidad",
-                'telefono' => 954800562,
-                'abierto' => 0
-            ],
+        
         ]);
 
         

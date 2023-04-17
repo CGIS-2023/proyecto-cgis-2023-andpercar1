@@ -18,7 +18,7 @@ class FarmaciaPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -41,7 +41,7 @@ class FarmaciaPolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class FarmaciaPolicy
      */
     public function update(User $user, Farmacia $farmacia)
     {
-        //
+        return true;
     }
 
     /**
@@ -65,7 +65,7 @@ class FarmaciaPolicy
      */
     public function delete(User $user, Farmacia $farmacia)
     {
-        //
+        return true;
     }
 
     /**
@@ -77,7 +77,7 @@ class FarmaciaPolicy
      */
     public function restore(User $user, Farmacia $farmacia)
     {
-        //
+        return true;
     }
 
     /**
@@ -89,6 +89,6 @@ class FarmaciaPolicy
      */
     public function forceDelete(User $user, Farmacia $farmacia)
     {
-        //
+        return true;
     }
 }

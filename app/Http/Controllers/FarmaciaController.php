@@ -15,7 +15,8 @@ class FarmaciaController extends Controller
      */
     public function index()
     {
-        // 
+        $farmacias = Farmacia::paginate(25);
+        return view('/farmacia/index', ['farmacias' => $farmacias]); 
     }
 
     /**
@@ -25,7 +26,7 @@ class FarmaciaController extends Controller
      */
     public function create()
     {
-        //
+        return view('farmacias/create');
     }
 
     /**
@@ -36,7 +37,15 @@ class FarmaciaController extends Controller
      */
     public function store(StoreFarmaciaRequest $request)
     {
-        //
+        $this->validate($request, [
+            'nombre' => 'required|string|max:255',
+            'telefono' => 'required|numeric',
+            'abierto' => 'required|boolean'
+        ]);
+        $farmacias = new Farmacia($request->all());
+        $farmacia->save();
+        session()->flash('success', 'Farmacia añadida correctamente.');
+        return redirect()->route('farmacias.index');
     }
 
     /**
@@ -58,7 +67,7 @@ class FarmaciaController extends Controller
      */
     public function edit(Farmacia $farmacia)
     {
-        //
+        return view('farmacias/edit', ['farmacia' => $farmacia]);
     }
 
     /**
@@ -70,7 +79,15 @@ class FarmaciaController extends Controller
      */
     public function update(UpdateFarmaciaRequest $request, Farmacia $farmacia)
     {
-        //
+        $this->validate($request, [
+            'nombre' => 'required|string|max:255',
+            'telefono' => 'required|numeric',
+            'abierto' => 'required|boolean'
+        ]);
+        $farmacia->fill($request->all());
+        $farmacia->save();
+        session()->flash('success', 'Farmacia modificado correctamente.');
+        return redirect()->route('farmacias.index');
     }
 
     /**
@@ -81,6 +98,12 @@ class FarmaciaController extends Controller
      */
     public function destroy(Farmacia $farmacia)
     {
-        //
+        if($farmacia->delete()) {
+            session()->flash('success', 'Farmacia eliminada correctamente.');
+        }
+        else{
+            session()->flash('warning', 'No se pudo eliminar la Farmacia.');
+        }
+        return redirect()->route('farmacias.index');
     }
 }

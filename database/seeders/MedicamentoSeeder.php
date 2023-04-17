@@ -19,15 +19,18 @@ class MedicamentoSeeder extends Seeder
         DB::table('medicamentos')->insert([
             [
                 'nombre'=> "Ibuprofeno",
-                'miligramos'=> 600
+                'miligramos'=> 600,
+                'farmacia_id'=> 1
             ],
             [
                 'nombre'=> "Paracetamol",
-                'miligramos'=> 1000
+                'miligramos'=> 1000,
+                'farmacia_id'=> 2
             ],
             [
                 'nombre'=> "Ilvico",
-                'miligramos'=> 325
+                'miligramos'=> 325,
+                'farmacia_id'=> 2
             ],
         ]);
 

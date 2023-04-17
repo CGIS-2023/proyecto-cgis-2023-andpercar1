@@ -36,11 +36,23 @@
                                 <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="$medicamento->nombre" required autofocus />
                             </div>
 
-                                <div>
-                                    <x-label for="miligramos" :value="__('Dosis (mg.)')" />
+                            <div>
+                                <x-label for="miligramos" :value="__('Dosis (mg.)')" />
 
-                                    <x-input id="miligramos" class="block mt-1 w-full" type="number" step="50" name="miligramos" :value="$medicamento->miligramos" required />
-                                </div>
+                                <x-input id="miligramos" class="block mt-1 w-full" type="number" step="50" name="miligramos" :value="$medicamento->miligramos" required />
+                            </div>
+
+                            <div class="mt-4">
+                                <x-label for="farmacia_id" :value="__('Farmacia')" />
+
+
+                                <x-select id="farmacia_id" name="farmacia_id" required>
+                                    <option value="">{{__('Elige una opción')}}</option>
+                                    @foreach ($farmacias as $farmacia)
+                                    <option value="{{$farmacia->id}}" @if ($medicamento->farmacia_id == $farmacia->id) selected @endif>{{$farmacia->nombre}}</option>
+                                    @endforeach
+                                </x-select>
+                            </div>
 
                             <div class="flex items-center justify-end mt-4">
                                 <x-button type="button" class="bg-red-800 hover:bg-red-700">

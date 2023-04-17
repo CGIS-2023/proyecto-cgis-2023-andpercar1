@@ -6,6 +6,7 @@ use App\Http\Requests\StoreMedicamentoRequest;
 use App\Http\Requests\UpdateMedicamentoRequest;
 use Illuminate\Http\Request;
 use App\Models\Medicamento;
+use App\Models\Farmacia;
 
 class MedicamentoController extends Controller
 {
@@ -28,7 +29,8 @@ class MedicamentoController extends Controller
      */
     public function create()
     {
-        return view('medicamentos/create');
+        $farmacias = Farmacia::all();
+        return view('medicamento/create', ['farmacias' => $farmacias]);
     }
 
     /**
@@ -41,7 +43,8 @@ class MedicamentoController extends Controller
     {
         $this->validate($request, [
             'nombre' => 'required|string|max:255',
-            'miligramos' => 'required|numeric'
+            'miligramos' => 'required|numeric',
+            'farmacia_id' => 'required|exists:farmacias,id' 
         ]);
         $medicamento = new Medicamento($request->all());
         $medicamento->save();
@@ -63,14 +66,16 @@ class MedicamentoController extends Controller
    
     public function edit(Medicamento $medicamento)
     {
-        return view('medicamentos/edit', ['medicamento' => $medicamento]);
+        $farmacias = Farmacia::all();
+        return view('medicamentos/edit', ['medicamento' => $medicamento, 'farmacias' => $farmacias]);
     }
 
     public function update(Request $request, Medicamento $medicamento)
     {
         $this->validate($request, [
             'nombre' => 'required|string|max:255',
-            'miligramos' => 'required|numeric'
+            'miligramos' => 'required|numeric',
+            'farmacia_id' => 'required|exists:farmacias,id'
         ]);
         $medicamento->fill($request->all());
         $medicamento->save();

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->integer('miligramos');
+            $table->foreignId('farmacia_id')->unique()->constrained()->onDelete('cascade');
         });
     }
 

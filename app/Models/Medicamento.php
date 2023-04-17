@@ -9,7 +9,7 @@ class Medicamento extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre', 'miligramos'];
+    protected $fillable = ['nombre', 'miligramos', 'farmacia_id'];
 
     protected $casts = [
         'fecha_caducidad' => 'datetime:Y-m-d'

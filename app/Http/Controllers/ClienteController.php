@@ -47,6 +47,7 @@ class ClienteController extends Controller
             'nombre' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
             'DNI' => 'required|numeric',
+            'telefono' => 'required|numeric',
             'num_seguridadsocial' => 'required|numeric',
             'direccion' => 'required|string|max:255'
         ]);

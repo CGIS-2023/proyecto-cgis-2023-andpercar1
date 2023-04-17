@@ -15,7 +15,7 @@ class FarmaciaController extends Controller
      */
     public function index()
     {
-        //
+        // 
     }
 
     /**

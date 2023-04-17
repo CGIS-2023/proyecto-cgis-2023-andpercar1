@@ -21,7 +21,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        $medicamentos = Medicamento::paginate(25);
+        $clientes = Cliente::paginate(25);
         return view('/clientes/index', ['clientes' => $clientes]);
     }
 

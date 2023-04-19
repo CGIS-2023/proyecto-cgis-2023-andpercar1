@@ -7,7 +7,7 @@ use App\Http\Requests\UpdateClienteRequest;
 use App\Models\Cliente;
 
 class ClienteController extends Controller
-{
+{ 
 
     public function __construct()
     {

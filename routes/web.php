@@ -35,5 +35,7 @@ require __DIR__.'/auth.php';
 //Route::middleware(['auth', 'tipo_usuario:3'])->group(function () {
     Route::resources([
         'medicamentos' => MedicamentoController::class,
+        'clientes' => ClienteController::class,
+        'farmacias' => FarmaciaController::class,
     ]);
 //});

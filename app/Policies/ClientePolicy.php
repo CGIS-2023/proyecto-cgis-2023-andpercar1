@@ -9,7 +9,7 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 class ClientePolicy
 {
     use HandlesAuthorization;
-
+ 
     /**
      * Determine whether the user can view any models.
      *
@@ -30,7 +30,7 @@ class ClientePolicy
      */
     public function view(User $user, Cliente $cliente)
     {
-        return true;
+        //
     }
 
     /**
@@ -77,7 +77,7 @@ class ClientePolicy
      */
     public function restore(User $user, Cliente $cliente)
     {
-        //
+        return true;
     }
 
     /**
@@ -89,6 +89,6 @@ class ClientePolicy
      */
     public function forceDelete(User $user, Cliente $cliente)
     {
-        //
+        return true;
     }
 }

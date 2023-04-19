@@ -19,9 +19,12 @@
                     <table class="min-w-max w-full table-auto">
                         <thead>
                             <tr class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
-                                <th class="py-3 px-6 text-left">Nombre común</th>
-                                <th class="py-3 px-6 text-left">Dosis</th>
-                                <th class="py-3 px-6 text-right">Acciones</th>
+                                <th class="py-3 px-6 text-left">Nombre</th>
+                                <th class="py-3 px-6 text-left">Apellidos</th>
+                                <th class="py-3 px-6 text-right">DNI</th>
+                                <th class="py-3 px-6 text-right">Telelofono</th>
+                                <th class="py-3 px-6 text-right">Nº seguridad social</th>
+                                <th class="py-3 px-6 text-right">Direccion</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-600 text-sm font-light">

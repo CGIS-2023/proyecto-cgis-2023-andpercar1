@@ -30,7 +30,7 @@ class MedicamentoController extends Controller
     public function create()
     {
         $farmacias = Farmacia::all();
-        return view('medicamento/create', ['farmacias' => $farmacias]);
+        return view('medicamentos/create', ['farmacias' => $farmacias]);
     }
 
     /**

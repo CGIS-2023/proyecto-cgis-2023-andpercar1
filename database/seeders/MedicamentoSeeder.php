@@ -30,7 +30,7 @@ class MedicamentoSeeder extends Seeder
             [
                 'nombre'=> "Ilvico",
                 'miligramos'=> 325,
-                'farmacia_id'=> 2
+                'farmacia_id'=> 1
             ],
         ]);
 

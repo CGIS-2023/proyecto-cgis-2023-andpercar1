@@ -47,7 +47,7 @@
 
                                 <x-select id="farmacia_id" name="farmacia_id" required>
                                     <option value="">{{__('Elige una opción')}}</option>
-                                    @foreach ($especialidads as $especialidad)
+                                    @foreach ($farmacias as $farmacia)
                                     <option value="{{$farmacia->id}}" @if (old('farmacia_id') == $farmacia->id) selected @endif>{{$farmacia->nombre}}</option>
                                     @endforeach
                                 </x-select>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreFarmaciaRequest;
 use App\Http\Requests\UpdateFarmaciaRequest;
+use Illuminate\Http\Request;
 use App\Models\Farmacia;
+use App\Models\Cliente;
 
 class FarmaciaController extends Controller
 {
@@ -14,9 +16,9 @@ class FarmaciaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {  
         $farmacias = Farmacia::paginate(25);
-        return view('/farmacia/index', ['farmacias' => $farmacias]); 
+        return view('/farmacias/index', ['farmacias' => $farmacias]); 
     }
 
     /**
@@ -42,7 +44,7 @@ class FarmaciaController extends Controller
             'telefono' => 'required|numeric',
             'abierto' => 'required|boolean'
         ]);
-        $farmacias = new Farmacia($request->all());
+        $farmacia = new Farmacia($request->all());
         $farmacia->save();
         session()->flash('success', 'Farmacia añadida correctamente.');
         return redirect()->route('farmacias.index');

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreClienteRequest;
 use App\Http\Requests\UpdateClienteRequest;
+use Illuminate\Http\Request;
 use App\Models\Cliente;
+use App\Models\Farmacia;
 
 class ClienteController extends Controller
 { 
@@ -32,7 +34,8 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('clientes/create');
+        $farmacias = Farmacia::all();
+        return view('clientes/create', ['farmacias' => $farmacias]);
     }
 
     /**
@@ -46,12 +49,12 @@ class ClienteController extends Controller
         $this->validate($request, [
             'nombre' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
-            'DNI' => 'required|numeric',
-            'telefono' => 'required|numeric',
-            'num_seguridadsocial' => 'required|numeric',
+            'DNI' => 'required|string|max:225',
+            'telefono' => 'required|string|max:225',
+            'num_seguridadsocial' => 'required|string|max:225',
             'direccion' => 'required|string|max:255'
         ]);
-        $clientes = new Cliente($request->all());
+        $cliente = new Cliente($request->all());
         $cliente->save();
         session()->flash('success', 'Cliente creado correctamente.');
         return redirect()->route('clientes.index');
@@ -91,8 +94,8 @@ class ClienteController extends Controller
         $this->validate($request, [
             'nombre' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
-            'DNI' => 'required|numeric',
-            'num_seguridadsocial' => 'required|numeric',
+            'DNI' => 'required|string|max:225',
+            'num_seguridadsocial' => 'required|string|max:225',
             'direccion' => 'required|string|max:255'
         ]);
         $cliente->fill($request->all());

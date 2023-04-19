@@ -53,7 +53,7 @@
                                 </td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <span class="font-medium">{{$cliente->nº seguridad social}} </span>
+                                        <span class="font-medium">{{$cliente->nºSeguridadSocial}} </span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">
@@ -73,7 +73,7 @@
                                             </a>
                                         </div>
                                         <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                            <form id="delete-form-{{$cliente->id}}" method="POST" action="{{ route('farmacia.destroy', $cliente->id) }}">
+                                            <form id="delete-form-{{$cliente->id}}" method="POST" action="{{ route('clientes.destroy', $cliente->id) }}">
                                                 @csrf
                                                 @method('delete')
                                                 <a class="cursor-pointer" onclick="getElementById('delete-form-{{$cliente->id}}').submit();">

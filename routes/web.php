@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MedicamentoController;
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\FarmaciaController;
 
 /*
 |--------------------------------------------------------------------------

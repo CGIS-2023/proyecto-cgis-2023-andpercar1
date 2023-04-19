@@ -44,27 +44,25 @@
                                     <div>
                                         <x-label for="DNI" :value="__('DNI')" />
 
-                                        <x-input id="DNI" class="block mt-1 w-full" type="text" name="DNI" step="5" :value="old(DNI)" required autofocus />
+                                        <x-input id="DNI" class="block mt-1 w-full" type="text" name="DNI" :value="old('DNI')" required autofocus />
                                     </div>
 
                                         <div>
                                             <x-label for="telefono" :value="__('Telefono')" />
 
-                                            <x-input id="telefono" class="block mt-1 w-full" type="number" name="telefono" step="5" :value="old('Telefono')" required autofocus />                                        
+                                            <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('Telefono')" required autofocus />                                        
                                         </div>
-                                        
-
                                             <div>
-                                                <x-label for="nº seguridad social" :value="__('Nº seguridad social')" />
+                                                <x-label for="num_seguridadsocial" :value="__('Nº Seguridad Social')" />
 
-                                                <x-input id="nº seguridad social" class="block mt-1 w-full" type="number" name="nº seguridad social" step="5" :value="old('Nº seguridad social')" required autofocus />                                      
+                                                <x-input id="num_seguridadsocial" class="block mt-1 w-full" type="text" name="num_seguridadsocial" :value="old('Nº Seguridad Social')" required autofocus />
                                             </div>
 
                                                 <div>
-                                                    <x-label for="direccion" :value="__('Direccion')" />
+                                                     <x-label for="direccion" :value="__('Direccion')" />
 
-                                                    <x-input id="direccion" class="block mt-1 w-full" type="text" name="direccion" step="5" :value="old(Direccion)" required autofocus />
-                                                </div>
+                                                     <x-input id="direccion" class="block mt-1 w-full" type="text" name="direccion" :value="old('Direccion')" required autofocus />
+                                                 </div>
                                             
 
                             <div class="flex items-center justify-end mt-4">

@@ -11,7 +11,7 @@
                 <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
               </li>
               <li>
-                <a href="#" class="text-gray-500" aria-current="page">Editar {{$cliente->nombre}} {{$cliente->apellidos}} {{$cliente->DNI}} {{$cliente->telefono}} {{$cliente->nº seguridad social}} {{$cliente->direccion}}</a>
+                <a href="#" class="text-gray-500" aria-current="page">Editar {{$cliente->nombre}} {{$cliente->apellidos}} {{$cliente->DNI}} {{$cliente->telefono}} {{$cliente->nºSeguridadSocial}} {{$cliente->direccion}}</a>
               </li>
             </ol>
           </nav>
@@ -45,27 +45,26 @@
                                     <div>
                                         <x-label for="DNI" :value="__('DNI')" />
 
-                                        <x-input id="DNI" class="block mt-1 w-full" type="text" name="DNI" step="5" :value="old(DNI)" required autofocus />
+                                        <x-input id="DNI" class="block mt-1 w-full" type="text" name="DNI" :value="old('DNI')" required autofocus />
                                     </div>
 
                                         <div>
                                             <x-label for="telefono" :value="__('Telefono')" />
 
-                                            <x-input id="telefono" class="block mt-1 w-full" type="number" name="telefono" step="5" :value="old('Telefono')" required autofocus />                                        
+                                            <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('Telefono')" required autofocus />                                        
                                         </div>
-                                        
 
                                             <div>
-                                                <x-label for="nº seguridad social" :value="__('Nº seguridad social')" />
+                                                <x-label for="num_seguridadsocial" :value="__('Nº Seguridad Social')" />
 
-                                                <x-input id="nº seguridad social" class="block mt-1 w-full" type="number" name="nº seguridad social" step="5" :value="old('Nº seguridad social')" required autofocus />                                      
+                                                <x-input id="num_seguridadsocial" class="block mt-1 w-full" type="text" name="num_seguridadsocial" :value="old('Nº Seguridad Social')" required autofocus />
                                             </div>
 
                                                 <div>
-                                                    <x-label for="direccion" :value="__('Direccion')" />
+                                                     <x-label for="direccion" :value="__('Direccion')" />
 
-                                                    <x-input id="direccion" class="block mt-1 w-full" type="text" name="direccion" step="5" :value="old(Direccion)" required autofocus />
-                                                </div>
+                                                     <x-input id="direccion" class="block mt-1 w-full" type="text" name="direccion" :value="old('Direccion')" required autofocus />
+                                                 </div>
 
                             <div class="flex items-center justify-end mt-4">
                                 <x-button type="button" class="bg-red-800 hover:bg-red-700">

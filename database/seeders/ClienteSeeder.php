@@ -20,8 +20,8 @@ class ClienteSeeder extends Seeder
                 'nombre' => "Jose",
                 'apellidos' => "Fernandez Herrera",
                 'DNI' => "29546772L",
-                'telefono' => 609178573,
-                'num_seguridadsocial' => 110130116410,
+                'telefono' => "609178573",
+                'num_seguridadsocial' => "110130116410",
                 'direccion' => "C/Torres,58"
                 
             ],
@@ -29,8 +29,8 @@ class ClienteSeeder extends Seeder
                 'nombre' => "Manuel",
                 'apellidos' => "Granados Suarez",
                 'DNI' => "08516873N",
-                'telefono' => 684534234,
-                'num_seguridadsocial' => 419143228611,
+                'telefono' => "684534234",
+                'num_seguridadsocial' => "419143228611",
                 'direccion' => "C/Relator,14"
             ],
             ]);

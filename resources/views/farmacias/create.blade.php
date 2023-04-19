@@ -38,7 +38,7 @@
                                 <div>
                                     <x-label for="telefono" :value="__('Telefono')" />
 
-                                    <x-input id="telefono" class="block mt-1 w-full" type="number" name="telefono" step="5" :value="old('telefono')" required autofocus />
+                                    <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('telefono')" required autofocus />
                                 </div>
 
                                 <div class="mt-4">
@@ -47,8 +47,8 @@
 
                                     <x-select id="abierto" name="abierto" required>
                                         <option value="">{{__('Elige una opción')}}</option>
-                                        <option value="1" @if (old('abierto') == 1) selected @endif>{{__('Sí')}}</option>
-                                        <option value="0" @if (old('abierto') == 0) selected @endif>{{__('No')}}</option>
+                                        <option value="1" @if (old('abierto') == "Abierto") selected @endif>{{__('Sí')}}</option>
+                                        <option value="0" @if (old('abierto') == "Cerrado") selected @endif>{{__('No')}}</option>
                                     </x-select>
                                 </div>
 

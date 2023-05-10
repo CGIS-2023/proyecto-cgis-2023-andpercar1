@@ -20,25 +20,27 @@ class ProveedorSeeder extends Seeder
             [
                 'nombre'=> "Abundance and Health",
                 'email'=> "a&h@proveedor.com",
-                'telefono'=> 954636748,
-                'direccion'=> 'Av de la Palmera, 30',
+                'telefono'=> "954636748",
+                'direccion'=> "Av de la Palmera, 30",
                 'medicamento_id'=> 1
             ],
             [
                 'nombre'=> "Laboratorios Ubiopharma",
                 'email'=> "lab_ubi@proveedor.com",
-                'telefono'=> 954331346,
+                'telefono'=> "954331346",
                 'direccion'=> "C/ Muñoz León, 16",
                 'medicamento_id'=> 2
             ],
             [
                 'nombre'=> "Cofarme",
                 'email'=> "cofarme@proveedor.com",
-                'telefono'=> 954331346,
+                'telefono'=> "954331346",
                 'direccion'=> "C/ Muñoz León, 16",
                 'medicamento_id'=> 3
             ],
         ]);
 
+        
+ 
     }
 }

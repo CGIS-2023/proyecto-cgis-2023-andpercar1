@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class MedicamentoSeeder extends Seeder
+class RecetaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,21 +15,18 @@ class MedicamentoSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('recetas')->insert([
+            [
+                'descripcion' => "Tomar 2 veces al día",
+                'fecha' => '2023-01-23',
+                'sanitario_id' => 1
+            ],
+            [
+                'descripcion' => "Dolores de cabeza",
+                'fecha' => '2023-02-02',
+                'sanitario_id' => 2
+            ],
         
-        DB::table('medicamentos')->insert([
-            [
-                'nombre'=> "Ibuprofeno",
-                'miligramos'=> 600
-            ],
-            [
-                'nombre'=> "Paracetamol",
-                'miligramos'=> 1000
-            ],
-            [
-                'nombre'=> "Ilvico",
-                'miligramos'=> 325
-            ],
         ]);
-
     }
 }

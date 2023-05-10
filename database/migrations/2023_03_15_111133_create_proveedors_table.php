@@ -16,11 +16,12 @@ return new class extends Migration
         Schema::create('proveedors', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nombre')->nullable;
-            $table->string('email')->nullable;
-            $table->integer('telefono')->nullable;
-            $table->string('direccion')->nullable;
+            $table->string('nombre');
+            $table->string('email');
+            $table->string('telefono');
+            $table->string('direccion');
             $table->foreignId('medicamento_id')->constrained()->onDelete('cascade');
+            
         });
     }
 

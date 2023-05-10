@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MedicamentoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\FarmaciaController;
+use App\Http\Controllers\ProveedorController;
+use App\Http\Controllers\SanitarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,5 +41,19 @@ require __DIR__.'/auth.php';
         'medicamentos' => MedicamentoController::class,
         'clientes' => ClienteController::class,
         'farmacias' => FarmaciaController::class,
+        'proveedors' => ProveedorController::class,
+        'sanitarios' => SanitarioController::class,
     ]);
+//});
+
+//Route::middleware(['auth', 'tipo_usuario:1,3'])->group(function () {
+    //Route::get('/medicos/{medico}/edit', [MedicoController::class, 'edit'])->name('medicos.edit');
+    //Route::put('/medicos/{medico}', [MedicoController::class, 'update'])->name('medicos.update');
+    //Dos rutas que tienen además un middleware con un Policy para hilar fino
+    Route::post('/proveedors/{proveedor}/attach-farmacia', [ProveedorController::class, 'attachFarmacia'])
+        ->name('proveedors.attachFarmacia')
+        ->middleware('can:attachFarmacia,proveedor');
+    Route::delete('/proveedors/{proveedor}/detach-farmacia/{farmacia}', [ProveedorController::class, 'detachFarmacia'])
+        ->name('proveedors.detachFarmacia')
+        ->middleware('can:detachFarmacia,proveedor');
 //});

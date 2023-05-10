@@ -16,11 +16,19 @@ class Farmacia extends Model
     ];
 
     public function medicamentos(){
-        return $this->hasMany(Medicamento::class);
+        return $this->belongsToMany(Medicamento::class)->withPivot('codigo_stock');
     }
 
     public function clientes(){
         return $this->belongsToMany(Cliente::class)->withPivot('codigo_paciente');
+    }
+
+    public function proveedors(){
+        return $this->belongsToMany(Proveedor::class)->withPivot('fecha_pedido');
+    }
+
+    public function sanitarios(){
+        return $this->hasMany(Sanitario::class);
     }
 
 }

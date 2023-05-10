@@ -26,4 +26,8 @@ class Cliente extends Model
         return $this->belongsToMany(Farmacia::class)->withPivot('codigo_paciente');
     }
 
+    public function recetas(){
+        return $this->hasMany(Receta::class);
+    }
+
 }

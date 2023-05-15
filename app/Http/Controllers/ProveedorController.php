@@ -44,7 +44,7 @@ class ProveedorController extends Controller
     {
         $this->validate($request, [
             'nombre' => 'required|string|max:255',
-            'email' => 'required|string|max:255',
+            'email' => 'required|string|max:255|email',
             'telefono' => 'required|string|max:255',
             'direccion' => 'required|string|max:255'
         ]);

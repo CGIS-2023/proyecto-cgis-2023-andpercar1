@@ -144,12 +144,18 @@
                     <div class="grid grid-cols-1 md:grid-cols-1">
                         <div class="p-6">
                             <div class="flex items-center">
+
                                 <div class="text-lg leading-7 font-semibold text-center block" style="width: 100%">
-                                    <a target="_blank" href="http://localhost/dashboard" class="underline text-gray-900 dark:text-white">Proyecto de farmacias de CGIS 2022/23</a>
+                                    <a target="_blank" href="http://localhost/dashboard" class="underline text-gray-900 dark:text-white">Proyecto farmacias</a>
+                                </div>
+
+                                <div class="text-lg leading-7 font-semibold text-center block" style="width: 100%">
+                                    <a target="_blank" href="https://github.com/DamianUS/cgis-2021" class="underline text-gray-900 dark:text-white">GitHub de Damian</a>
                                 </div>
                             </div>
 
                             <div class="">
+                        
                             </div>
                         </div>
                     </div>

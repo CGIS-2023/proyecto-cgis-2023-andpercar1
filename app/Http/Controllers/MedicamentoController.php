@@ -29,7 +29,7 @@ class MedicamentoController extends Controller
      */
     public function create()
     {
-        
+        $farmacias = Farmacia::all();
         return view('medicamentos/create', ['farmacias' => $farmacias]);
     }
 
@@ -59,7 +59,7 @@ class MedicamentoController extends Controller
      */
     public function show(Medicamento $medicamento)
     {
-        //
+        return true;
     }
 
    
@@ -98,25 +98,20 @@ class MedicamentoController extends Controller
         return redirect()->route('medicamentos.index');
     }
 
-    public function attach_farmacia(Request $request, Medicamenti $medicamento)
+    public function attachFarmacia(Request $request, Medicamento $medicamento)
     {
         $this->validateWithBag('attach',$request, [
-            'medicamento_id' => 'required|exists:medicos,id',
-            'inicio' => 'required|date',
-            'fin' => 'required|date|after:inicio',
-            'comentarios' => 'nullable|string',
-            'tomas_dia' => 'required|numeric|min:0',
+            'farmacia_id' => 'required|exists:farmacias,id',
+            'codigo_stock' => 'required|string|max:9',
+            
         ]);
         $medicamento->farmacias()->attach($request->farmacia_id, [
-            'inicio' => $request->inicio,
-            'fin' => $request->fin,
-            'comentarios' => $request->comentarios,
-            'tomas_dia' => $request->tomas_dia
+            'codigo_stock' => $request->codigo_stock
         ]);
         return redirect()->route('medicamentos.edit', $medicamento->id);
     }
 
-    public function detach_farmacia(Medicamento $medicamento, Farmacia $farmacia)
+    public function detachFarmacia(Medicamento $medicamento, Farmacia $farmacia)
     {
         $medicamento->farmacias()->detach($farmacia->id);
         return redirect()->route('medicamentos.edit', $medicamento->id);

@@ -52,6 +52,7 @@
                                     @endforeach
                                 </x-select>
                             </div>
+                            
 
                             <div class="flex items-center justify-end mt-4">
                                 <x-button type="button" class="bg-red-800 hover:bg-red-700">

@@ -91,4 +91,14 @@ class MedicamentoPolicy
     {
         return true;
     }
+
+    public function attachFarmacia(User $user, Medicamento $medicamento)
+    {
+        return true;
+    }
+
+    public function detachFarmacia(User $user, Medicamento $medicamento)
+    {
+        return true;
+    }
 }

@@ -23,6 +23,7 @@
                                 <th class="py-3 px-6 text-left">Apellidos</th>
                                 <th class="py-3 px-6 text-left">Telefono</th>
                                 <th class="py-3 px-6 text-left">DNI</th>
+                                <th class="py-3 px-6 text-left">Farmacia</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-600 text-sm font-light">

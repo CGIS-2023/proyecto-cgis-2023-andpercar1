@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre');
-            $table->integer('telefono');
+            $table->integer('telefono')->unique();
             $table->boolean('abierto');
         });
     }

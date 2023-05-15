@@ -6,6 +6,7 @@ use App\Http\Requests\StoreSanitarioRequest;
 use App\Http\Requests\UpdateSanitarioRequest;
 use App\Models\Sanitario;
 use App\Models\Farmacia;
+use Illuminate\Http\Request;
 
 class SanitarioController extends Controller
 {
@@ -33,6 +34,7 @@ class SanitarioController extends Controller
      */
     public function create()
     {
+        $farmacias = Farmacia::all();
         return view('sanitarios/create', ['farmacias' => $farmacias]);
     }
 
@@ -48,11 +50,11 @@ class SanitarioController extends Controller
             'nombre' => 'required|string|max:255',
             'apellidos' => 'required|string|max:225',
             'telefono' => 'requires|string|max:9',
-            'DNI' => 'requires|string|max:9'
+            'DNI' => 'requires|string|max:9',
         ]);
         $sanitario = new Sanitario($request->all());
-        $sanitario->save();
-        session()->flash('success', 'Sanitario creado correctamente.');
+        $medico->save();
+        session()->flash('success', 'Sanitario creado correctamente');
         return redirect()->route('sanitarios.index');
     }
 
@@ -108,7 +110,7 @@ class SanitarioController extends Controller
      */
     public function destroy(Sanitario $sanitario)
     {
-        if($medicamento->delete()) {
+        if($sanitario->delete()) {
             session()->flash('success', 'Sanitario borrado correctamente.');
         }
         else{

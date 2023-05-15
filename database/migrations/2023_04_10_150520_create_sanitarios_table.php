@@ -18,9 +18,10 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->string('apellidos');
-            $table->string('telefono');
-            $table->string('DNI');
+            $table->string('telefono')->unique();
+            $table->string('DNI')->unique();
             $table->foreignId('farmacia_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->unique()->constrained()->onDelete('cascade');
         });
     }
 

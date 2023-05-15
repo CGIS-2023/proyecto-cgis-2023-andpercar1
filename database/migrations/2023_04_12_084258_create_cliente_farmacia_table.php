@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('cliente_farmacia', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('codigo_paciente');
+            $table->integer('codigo_paciente')->unique();
             $table->foreignId('cliente_id')->constrained()->onDelete('cascade');
             $table->foreignId('farmacia_id')->constrained()->onDelete('cascade');
         });

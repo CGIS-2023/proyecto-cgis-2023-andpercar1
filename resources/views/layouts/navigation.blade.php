@@ -13,7 +13,22 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Inicio') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias')">
+                        {{ __('Farmacias') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('sanitarios.index')" :active="request()->routeIs('sanitarios')">
+                        {{ __('Sanitarios') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('medicamentos.index')" :active="request()->routeIs('medicamentos')">
+                        {{ __('Medicamentos') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors')">
+                        {{ __('Proveedores') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes')">
+                        {{ __('Clientes') }}
                     </x-nav-link>
                 </div>
             </div>

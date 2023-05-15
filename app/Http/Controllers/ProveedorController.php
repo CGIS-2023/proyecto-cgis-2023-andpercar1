@@ -129,5 +129,7 @@ class ProveedorController extends Controller
         return redirect()->route('proveedors.edit', $proveedor->id);
     }
 
+    
+
 
 }

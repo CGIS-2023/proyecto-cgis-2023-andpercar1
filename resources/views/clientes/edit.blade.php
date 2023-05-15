@@ -33,37 +33,37 @@
                             <div>
                                 <x-label for="nombre" :value="__('Nombre')" />
 
-                                <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('name')" required autofocus />
+                                <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre') ?? $cliente->nombre" required autofocus />
                             </div>
 
                                 <div>
                                     <x-label for="apellidos" :value="__('Apellidos')" />
 
-                                    <x-input id="apellidos" class="block mt-1 w-full" type="text" name="apellidos" :value="old('Apellidos')" required autofocus />
+                                    <x-input id="apellidos" class="block mt-1 w-full" type="text" name="apellidos" :value="old('apellidos') ?? $cliente->apellidos" required autofocus />
                                 </div>
 
                                     <div>
                                         <x-label for="DNI" :value="__('DNI')" />
 
-                                        <x-input id="DNI" class="block mt-1 w-full" type="text" name="DNI" :value="old('DNI')" required autofocus />
+                                        <x-input id="DNI" class="block mt-1 w-full" type="text" name="DNI" :value="old('DNI') ?? $cliente->DNI" required autofocus />
                                     </div>
 
                                         <div>
                                             <x-label for="telefono" :value="__('Telefono')" />
 
-                                            <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('Telefono')" required autofocus />                                        
+                                            <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('telefono') ?? $cliente->telefono" required autofocus />                                        
                                         </div>
 
                                             <div>
                                                 <x-label for="num_seguridadsocial" :value="__('Nº Seguridad Social')" />
 
-                                                <x-input id="num_seguridadsocial" class="block mt-1 w-full" type="text" name="num_seguridadsocial" :value="old('Nº Seguridad Social')" required autofocus />
+                                                <x-input id="num_seguridadsocial" class="block mt-1 w-full" type="text" name="num_seguridadsocial" :value="old('num_seguridadsocial') ?? $cliente->num_seguridadsocial" required autofocus />
                                             </div>
 
                                                 <div>
                                                      <x-label for="direccion" :value="__('Direccion')" />
 
-                                                     <x-input id="direccion" class="block mt-1 w-full" type="text" name="direccion" :value="old('Direccion')" required autofocus />
+                                                     <x-input id="direccion" class="block mt-1 w-full" type="text" name="direccion" :value="old('direccion') ?? $cliente->direccion" required autofocus />
                                                  </div>
 
                             <div class="flex items-center justify-end mt-4">

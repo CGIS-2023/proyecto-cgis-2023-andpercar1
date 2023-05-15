@@ -18,10 +18,11 @@ return new class extends Migration
             $table->timestamps();
             $table->string('nombre');
             $table->string('apellidos');
-            $table->string('DNI');
-            $table->string('telefono');
-            $table->string('num_seguridadsocial');
+            $table->string('DNI')->unique();
+            $table->string('telefono')->unique();
+            $table->string('num_seguridadsocial')->unique();
             $table->string('direccion');
+            $table->foreignId('user_id')->unique()->constrained()->onDelete('cascade');
         });
     }
 

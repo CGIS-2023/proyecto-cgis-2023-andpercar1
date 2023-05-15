@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="flex items-center mt-4 ml-2">
                     <form method="GET" action="{{ route('farmacias.create') }}">
-                        <x-button type="subit" class="ml-4">
+                        <x-button type="submit" class="ml-4">
                             {{ __('Crear farmacia') }}
                         </x-button>
                     </form>
@@ -40,12 +40,11 @@
                                 </td>
                                 <td class="py-3 px-6 text-left whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <span class="font-medium">{{$farmacia->medicamentos()->where('nombre', \Carbon\Carbon::now())->count()}}</span>
+                                        <span class="font-medium">{{$farmacia->abierto ? 'Sí' : 'No'}}</span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">
                                     <div class="flex item-center justify-end">
-
                                         <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
                                             <a href="{{route('farmacias.edit', $farmacia->id)}}">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

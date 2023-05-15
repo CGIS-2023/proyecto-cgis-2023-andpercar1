@@ -32,25 +32,25 @@
                             <div>
                                 <x-label for="nombre" :value="__('Nombre')" />
 
-                                <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="$sanitario->nombre" required autofocus />
+                                <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre') ?? $sanitario->nombre" required autofocus />
                             </div>
 
                             <div>
                                 <x-label for="apellidos" :value="__('Apellidos')" />
 
-                                <x-input id="apellidos" class="block mt-1 w-full" type="text" name="apellidos" :value="$sanitario->apellidos" required autofocus />
+                                <x-input id="apellidos" class="block mt-1 w-full" type="text" name="apellidos" :value="old('apellidos') ?? $sanitario->apellidos" required autofocus />
                             </div>
 
                             <div>
                                 <x-label for="telefono" :value="__('Telefono')" />
 
-                                <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="$sanitario->telefono" required autofocus />
+                                <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('telefono') ?? $sanitario->telefono" required autofocus />
                             </div>
 
                             <div>
                                 <x-label for="DNI" :value="__('DNI')" />
 
-                                <x-input id="DNI" class="block mt-1 w-full" type="text" name="DNI" :value="$sanitario->DNI" required autofocus />
+                                <x-input id="DNI" class="block mt-1 w-full" type="text" name="DNI" :value="old('DNI') ?? $sanitario->DNI" required autofocus />
                             </div>
 
                             <div class="mt-4">
@@ -60,7 +60,7 @@
                                 <x-select id="farmacia_id" name="farmacia_id" required>
                                     <option value="">{{__('Elige una opción')}}</option>
                                     @foreach ($farmacias as $farmacia)
-                                    <option value="{{$farmacia->id}}" @if ($farmacia->farmacia_id == $farmacia->id) selected @endif>{{$farmacia->nombre}}</option>
+                                    <option value="{{$farmacia->id}}" @if ($sanitario->farmacia_id == $farmacia->id) selected @endif>{{$farmacia->nombre}}</option>
                                     @endforeach
                                 </x-select>
                             </div>
@@ -76,7 +76,7 @@
                                 </x-button>
                             </div>
                         </form>
-                </div>
+                </div> 
             </div>
         </div>
     </div>

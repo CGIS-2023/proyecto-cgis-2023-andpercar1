@@ -47,7 +47,7 @@ class User extends Authenticatable
         return $this->hasOne(Sanitario::class);
     }
 
-    public function Cliente()
+    public function cliente()
     {
         return $this->hasOne(Cliente::class);
     }

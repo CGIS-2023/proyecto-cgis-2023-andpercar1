@@ -18,5 +18,9 @@ class Sanitario extends Model
     public function recetas(){
         return $this->hasMany(Receta::class);
     }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
     
 }

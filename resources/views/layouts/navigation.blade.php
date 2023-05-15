@@ -4,9 +4,9 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                        <x-application-logo class="block h-9 w-auto fill-current text-gray-600" />
                     </a>
                 </div>
 
@@ -15,22 +15,32 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Inicio') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias')">
+
+                    <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias.index') or request()->routeIs('farmacias.create') or request()->routeIs('farmacias.edit')">
                         {{ __('Farmacias') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('sanitarios.index')" :active="request()->routeIs('sanitarios')">
+
+                    <x-nav-link :href="route('sanitarios.index')" :active="request()->routeIs('sanitarios.index') or request()->routeIs('sanitarios.create') or request()->routeIs('sanitarios.edit')">
                         {{ __('Sanitarios') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('medicamentos.index')" :active="request()->routeIs('medicamentos')">
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('medicamentos.index')" :active="request()->routeIs('medicamentos.index') or request()->routeIs('medicametentos.create') or request()->routeIs('medicamentos.edit') or request()->routeIs('medicamentos.show')">
                         {{ __('Medicamentos') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors')">
+
+                    </div>
+                    <x-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors.index') or request()->routeIs('proveedors.create') or request()->routeIs('proveedors.edit')">
                         {{ __('Proveedores') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes')">
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index') or request()->routeIs('clientes.create') or request()->routeIs('clientes.edit')">
                         {{ __('Clientes') }}
                     </x-nav-link>
-                </div>
+
+
             </div>
 
             <!-- Settings Dropdown -->
@@ -38,7 +48,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+                            <<div>{{ Auth::user() ? Auth::user()->nombre : 'Sin usuario' }}</div>
 
                             <div class="ml-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -47,10 +57,9 @@
                             </div>
                         </button>
                     </x-slot>
-
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                            {{ __('Perfil del usuario') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
@@ -60,7 +69,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Cerrar sesión') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -90,8 +99,8 @@
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
             <div class="px-4">
-                <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user() ? Auth::user()->nombre : 'Sin usuario' }}</div>
+                <div class="font-medium text-sm text-gray-500">{{ Auth::user() ? Auth::user()->email : 'Sin usuario' }}</div>
             </div>
 
             <div class="mt-3 space-y-1">
@@ -106,7 +115,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Log out') }}
+                        {{ __('Log Out') }}
                     </x-responsive-nav-link>
                 </form>
             </div>

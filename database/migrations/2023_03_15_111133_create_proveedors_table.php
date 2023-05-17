@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre');
-            $table->string('email')->unique();
-            $table->string('telefono')->unique();
+            $table->string('email');
+            $table->string('telefono');
             $table->string('direccion');
             $table->foreignId('medicamento_id')->constrained()->onDelete('cascade');
             

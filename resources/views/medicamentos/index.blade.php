@@ -5,6 +5,25 @@
         </h2>
     </x-slot>
 
+    <form class="form-inline my-2 my-lg-0 float-right" method="GET" action="{{ route('medicamentos.index') }}">
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+            <label class="sr-only" for="farmacia_id">Farmacia</label>
+            <x-select id="farmacia_id" name="farmacia_id" class="form-control form-control-sm">
+                <option value="">Elige una farmacia</option>
+                <option value="inicial" @if (request('farmacia_id') === 'inicial') selected @endif>Todas las farmacias</option>
+                @foreach ($farmacias as $farmacia)
+                    <option value="{{ $farmacia->id }}" @if ($farmacia->id == request('farmacia_id')) selected @endif>{{ $farmacia->nombre }}</option>
+                @endforeach
+            </x-select>
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-secondary btn-sm" type="submit">Filtrar</button>
+        </div>
+    </div>
+</form>
+
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">

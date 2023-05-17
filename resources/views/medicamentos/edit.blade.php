@@ -42,7 +42,18 @@
                                 <x-input id="miligramos" class="block mt-1 w-full" type="number" step="50" name="miligramos" :value="$medicamento->miligramos" required />
                             </div>
 
-                    
+                            <div class="flex items-center justify-end mt-4">
+                                <x-button type="button" class="bg-red-800 hover:bg-red-700">
+                                    <a href={{route('medicamentos.index')}}>
+                                    {{ __('Cancelar') }}
+                                    </a>
+                                </x-button>
+
+                                <x-button class="ml-4">
+                                    {{ __('Guardar') }}
+                                </x-button>
+                            </div>
+                        </form>
 
                             <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -50,18 +61,15 @@
                 <div class="font-semibold text-lg px-6 py-4 bg-white border-b border-gray-200">
                     Farmacias asociadas actualmente
                 </div>
-                {{--<div class="flex items-center mt-4 ml-2">
-                    <form method="GET" action="{{ route('medicamentos.create') }}">
-                        <x-button type="subit" class="ml-4">
-                            {{ __('Crear farmacia') }}
-                        </x-button>
-                    </form>
-                </div>--}}
+               
                 <div class="p-6 bg-white border-b border-gray-200">
                     <table class="min-w-max w-full table-auto">
                         <thead>
                         <tr class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
                             <th class="py-3 px-6 text-left">Farmacias</th>
+                        </tr>
+                        <tr class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
+                            <th class="py-3 px-6 text-right">Codigo del stock</th>
                         </tr>
                         </thead>
                         <tbody class="text-gray-600 text-sm font-light">
@@ -69,7 +77,7 @@
                             <tr class="border-b border-gray-200 hover:bg-gray-100">
                                 <td class="py-3 px-6 text-left whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <span class="font-medium">{{$farmacia->nombre}} {{$farmacia->direccion}} {{$farmacia->telefono}} {{$farmacia->abierto}}  </span>
+                                        <span class="font-medium">{{$farmacia->nombre}}</span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center whitespace-nowrap">
@@ -129,7 +137,7 @@
                             <x-select id="farmacia_id" name="farmacia_id" required>
                                 <option value="">{{__('Elige una farmacia')}}</option>
                                 @foreach ($farmacias as $farmacia)
-                                    <option value="{{$farmacia->id}}" @if (old('farmacia_id') == $farmacia->id) selected @endif>{{$farmacia->nombre}} {{$farmacia->telefono}} {{$farmacia->abierto}} </option>
+                                    <option value="{{$farmacia->id}}" @if (old('farmacia_id') == $farmacia->id) selected @endif>{{$farmacia->nombre}}</option>
                                 @endforeach
                             </x-select>
                         </div>

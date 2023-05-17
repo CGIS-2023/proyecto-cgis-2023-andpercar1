@@ -30,7 +30,7 @@ class MedicamentoPolicy
      */
     public function view(User $user, Medicamento $medicamento)
     {
-        //
+        return true;
     }
 
     /**

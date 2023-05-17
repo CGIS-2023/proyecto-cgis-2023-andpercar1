@@ -45,23 +45,17 @@
                                 <x-input class="block mt-1 w-full"
                                          type="text"
                                          disabled
-                                         value="$medicamento->miligramos"
-                                />
+                                         :value="$medicamento->miligramos"
+                                         required />
+                            
 
                         </div>
 
-                        <div class="mt-4">
-                            <x-label for="farmacia_id" :value="__('Farmacia asociada')" />
-                                <x-input class="block mt-1 w-full"
-                                         type="text"
-                                         disabled
-                                         value="{{$medicamento->farmacia->nombre}}"
-                                />
-                        </div>
+                        
 
                         <div class="flex items-center justify-end mt-4">
                             <x-button type="button" class="bg-red-800 hover:bg-red-700">
-                                <a href={{route('medicamento.index')}}>
+                                <a href={{route('medicamentos.index')}}>
                                     {{ __('Volver') }}
                                 </a>
                             </x-button>
@@ -88,8 +82,6 @@
                     <table class="min-w-max w-full table-auto">
                         <thead>
                         <tr class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
-                            <th class="py-3 px-6 text-left">Nombre</th>
-                            <th class="py-3 px-6 text-left">Dosis (mg)</th>
                             <th class="py-3 px-6 text-left">Farmacia asociada</th>
                             <th class="py-3 px-6 text-left">Codigo stock</th>
 
@@ -100,7 +92,7 @@
                             <tr class="border-b border-gray-200 hover:bg-gray-100">
                                 <td class="py-3 px-6 text-left whitespace-nowrap">
                                     <div class="flex items-center">
-                                        <span class="font-medium">{{$farmacia->nombre}} {{$farmacia->telefono}} {{$farmacia->abierto}}</span>
+                                        <span class="font-medium">{{$farmacia->nombre}}</span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center whitespace-nowrap">

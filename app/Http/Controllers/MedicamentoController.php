@@ -16,11 +16,28 @@ class MedicamentoController extends Controller
         $this->authorizeResource(Medicamento::class, 'medicamento'); 
     }
 
-    public function index()
-    {
-        $medicamentos = Medicamento::paginate(25);
-        return view('/medicamentos/index', ['medicamentos' => $medicamentos]);
+    
+
+    public function index(Request $request)
+{
+    $medicamentos = Medicamento::query();
+
+    $farmaciaId = $request->farmacia_id;
+    if ($farmaciaId && $farmaciaId !== 'inicial') {
+        $medicamentos->whereHas('farmacias', function ($query) use ($farmaciaId) {
+            $query->where('farmacia_id', $farmaciaId);
+        });
     }
+
+    $medicamentos = $medicamentos->paginate(25);
+    $farmacias = Farmacia::all();
+
+    return view('/medicamentos/index', ['medicamentos' => $medicamentos, 'farmacias' => $farmacias]);
+}
+
+
+    
+
 
     /** 
      * Show the form for creating a new resource.
@@ -59,7 +76,7 @@ class MedicamentoController extends Controller
      */
     public function show(Medicamento $medicamento)
     {
-        return true;
+        return view('medicamentos/show', ['medicamento' => $medicamento]);
     }
 
    

@@ -21,12 +21,13 @@
                             <tr class="bg-gray-200 text-gray-900 uppercase text-sm leading-normal">
                                 <th class="py-3 px-6 text-left">Nombre</th>
                                 <th class="py-3 px-6 text-left">Telefono</th>
-                                <th class="py-3 px-6 text-right">Abierto</th>
+                                <th class="py-3 px-6 text-left">Abierto</th>
+                                <th class="py-3 px-6 text-left"></th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-600 text-sm font-light">
 
-                            @foreach ($farmacias as $farmacia)
+                        @foreach ($farmacias as $farmacia)
                             <tr class="border-b {{$farmacia->abierto ? 'bg-green-50 hover:bg-green-100' : 'bg-red-50 hover:bg-red-100'}} border-gray-200">
                                 <td class="py-3 px-6 text-left whitespace-nowrap">
                                     <div class="flex items-center">
@@ -38,7 +39,7 @@
                                         <span class="font-medium">{{$farmacia->telefono}} </span>
                                     </div>
                                 </td>
-                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                <td class="py-3 px-6 text-right whitespace-nowrap">
                                     <div class="flex items-center">
                                         <span class="font-medium">{{$farmacia->abierto ? 'Sí' : 'No'}}</span>
                                     </div>
@@ -62,12 +63,12 @@
                                                     </svg>
                                                 </a>
                                             </form>
-
                                         </div>
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach
+                        @endforeach
+
 
                         </tbody>
                     </table>

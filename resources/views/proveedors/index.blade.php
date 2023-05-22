@@ -22,7 +22,8 @@
                                 <th class="py-3 px-6 text-left">Nombre</th>
                                 <th class="py-3 px-6 text-left">email</th>
                                 <th class="py-3 px-6 text-left">Telefono</th>
-                                <th class="py-3 px-6 text-right">Direccion</th>
+                                <th class="py-3 px-6 text-left">Direccion</th>
+                                <th class="py-3 px-6 text-left"></th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-600 text-sm font-light">

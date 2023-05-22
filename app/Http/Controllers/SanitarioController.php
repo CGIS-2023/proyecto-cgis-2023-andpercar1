@@ -94,8 +94,8 @@ class SanitarioController extends Controller
         $this->validate($request, [
             'nombre' => 'required|string|max:255',
             'apellidos' => 'required|string|max:225',
-            'telefono' => 'requires|string|max:9',
-            'DNI' => 'requires|string|max:9'
+            'telefono' => 'required|string|max:9',
+            'DNI' => 'required|string|max:9'
         ]);
         $sanitario->fill($request->all());
         $sanitario->save();

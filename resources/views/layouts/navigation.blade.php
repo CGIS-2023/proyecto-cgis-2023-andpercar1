@@ -12,13 +12,6 @@
 
                <!-- Navigation Links -->
                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    @if(in_array(Auth::user()->tipo_usuario_id, [1,2]))
-                        <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias.index') or request()->routeIs('farmacias.create') or request()->routeIs('farmacias.edit')">
-                            {{ __('Mis citas') }}
-                        </x-nav-link>
-                    @endif
-                    @if(Auth::user()->tipo_usuario_id == 3)
-                           
                             <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias.index') or request()->routeIs('farmacias.create') or request()->routeIs('farmacias.edit') or request()->routeIs('farmacias.show')">
                                 {{ __('Farmacias') }}
                             </x-nav-link>
@@ -34,7 +27,6 @@
                             <x-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors.index') or request()->routeIs('proveedors.create') or request()->routeIs('proveedors.edit')">
                                 {{ __('Proveedores') }}
                             </x-nav-link>
-                    @endif
                 </div>
             </div>
 
@@ -43,7 +35,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                            <div>{{ Auth::user()->name }}</div>
+                             <<div>{{ Auth::user() ? Auth::user()->nombre : 'Sin usuario' }}</div>
 
                             <div class="ml-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -61,14 +53,9 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log out') }}
+                                {{ __('Cerrar sesión') }}
                             </x-dropdown-link>
                         </form>
-                        @if(\Illuminate\Support\Facades\Auth::user()->tipo_usuario_id == 1)
-                        <x-dropdown-link :href="route('sanitarios.edit', Auth::user()->sanitario->id)">
-                            {{ __('Mi perfil') }}
-                        </x-dropdown-link>
-                        @endif
                     </x-slot>
                 </x-dropdown>
             </div>
@@ -107,8 +94,8 @@
                 </div>
 
                 <div class="ml-3">
-                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                    <div class="font-medium text-base text-gray-800">{{ Auth::user() ? Auth::user()->nombre : 'Sin usuario' }}</div>
+                    <div class="font-medium text-sm text-gray-500">{{ Auth::user() ? Auth::user()->email : 'Sin usuario' }}</div>
                 </div>
             </div>
 

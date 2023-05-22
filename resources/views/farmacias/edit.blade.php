@@ -33,13 +33,13 @@
                             <div>
                                 <x-label for="nombre" :value="__('Nombre')" />
 
-                                <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre')" required autofocus />
+                                <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre') ?? $farmacia->nombre" required autofocus />
                             </div>
 
                                 <div>
                                     <x-label for="telefono" :value="__('telefono')" />
 
-                                    <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('telefono')" required autofocus />
+                                    <x-input id="telefono" class="block mt-1 w-full" type="text" name="telefono" :value="old('telefono') ?? $farmacia->telefono" required autofocus />
                                 </div>
 
                                     <div class="mt-4">

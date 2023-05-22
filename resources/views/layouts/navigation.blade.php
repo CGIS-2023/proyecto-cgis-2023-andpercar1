@@ -10,10 +10,10 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+               <!-- Navigation Links -->
+               <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @if(in_array(Auth::user()->tipo_usuario_id, [1,2]))
-                        <x-nav-link :href="route('citas.index')" :active="request()->routeIs('citas.index') or request()->routeIs('citas.create') or request()->routeIs('citas.edit') or request()->routeIs('citas.show')">
+                        <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias.index') or request()->routeIs('farmacias.create') or request()->routeIs('farmacias.edit')">
                             {{ __('Mis citas') }}
                         </x-nav-link>
                     @endif
@@ -65,7 +65,7 @@
                             </x-dropdown-link>
                         </form>
                         @if(\Illuminate\Support\Facades\Auth::user()->tipo_usuario_id == 1)
-                        <x-dropdown-link :href="route('medicos.edit', Auth::user()->medico->id)">
+                        <x-dropdown-link :href="route('sanitarios.edit', Auth::user()->sanitario->id)">
                             {{ __('Mi perfil') }}
                         </x-dropdown-link>
                         @endif
@@ -91,7 +91,9 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-           
+            <x-responsive-nav-link :href="route('medicamentos.index')" :active="request()->routeIs('medicamentos.index') or request()->routeIs('medicamentos.create') or request()->routeIs('medicamentos.edit')">
+                {{ __('Medicamentos') }}
+            </x-responsive-nav-link>
 
         </div>
 

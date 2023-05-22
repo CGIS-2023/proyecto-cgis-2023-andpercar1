@@ -908,8 +908,623 @@ class FarmaciaSeeder extends Seeder
             [
                 'codigo_stock' => "130",
                 'farmacia_id' => 12,
+                'medicamento_id' => 3,
+                
+            ],
+            [
+                'codigo_stock' => "131",
+                'farmacia_id' => 12,
+                'medicamento_id' => 6,
+                
+            ],
+            [
+                'codigo_stock' => "132",
+                'farmacia_id' => 12,
+                'medicamento_id' => 8,
+                
+            ],
+            [
+                'codigo_stock' => "133",
+                'farmacia_id' => 12,
+                'medicamento_id' => 9,
+                
+            ],
+            [
+                'codigo_stock' => "134",
+                'farmacia_id' => 12,
+                'medicamento_id' => 10,
+                
+            ],
+            [
+                'codigo_stock' => "135",
+                'farmacia_id' => 12,
+                'medicamento_id' => 12,
+                
+            ],
+            [
+                'codigo_stock' => "136",
+                'farmacia_id' => 12,
+                'medicamento_id' => 13,
+                
+            ],
+            [
+                'codigo_stock' => "137",
+                'farmacia_id' => 12,
+                'medicamento_id' => 14,
+                
+            ],
+            [
+                'codigo_stock' => "138",
+                'farmacia_id' => 12,
+                'medicamento_id' => 16,
+                
+            ],
+            [
+                'codigo_stock' => "139",
+                'farmacia_id' => 12,
+                'medicamento_id' => 20,
+                
+            ],
+            [
+                'codigo_stock' => "140",
+                'farmacia_id' => 12,
+                'medicamento_id' => 22,
+                
+            ],
+            [
+                'codigo_stock' => "141",
+                'farmacia_id' => 13,
+                'medicamento_id' => 1,
+                
+            ],
+            [
+                'codigo_stock' => "142",
+                'farmacia_id' => 13,
                 'medicamento_id' => 2,
                 
+            ],
+            [
+                'codigo_stock' => "143",
+                'farmacia_id' => 13,
+                'medicamento_id' => 3,
+                
+            ],
+            [
+                'codigo_stock' => "144",
+                'farmacia_id' => 13,
+                'medicamento_id' => 4,
+                
+            ],
+            [
+                'codigo_stock' => "145",
+                'farmacia_id' => 13,
+                'medicamento_id' => 5,
+                
+            ],
+            [
+                'codigo_stock' => "146",
+                'farmacia_id' => 13,
+                'medicamento_id' => 7,
+                
+            ],
+            [
+                'codigo_stock' => "147",
+                'farmacia_id' => 13,
+                'medicamento_id' => 9,
+                
+            ],
+            [
+                'codigo_stock' => "148",
+                'farmacia_id' => 13,
+                'medicamento_id' => 11,
+                
+            ],
+            [
+                'codigo_stock' => "149",
+                'farmacia_id' => 13,
+                'medicamento_id' => 12,
+                
+            ],
+            [
+                'codigo_stock' => "150",
+                'farmacia_id' => 13,
+                'medicamento_id' => 13,
+                
+            ],
+            [
+                'codigo_stock' => "151",
+                'farmacia_id' => 13,
+                'medicamento_id' => 16,
+                
+            ],
+            [
+                'codigo_stock' => "152",
+                'farmacia_id' => 13,
+                'medicamento_id' => 18,
+                
+            ],
+            [
+                'codigo_stock' => "153",
+                'farmacia_id' => 13,
+                'medicamento_id' => 19,
+                
+            ],
+            [
+                'codigo_stock' => "154",
+                'farmacia_id' => 13,
+                'medicamento_id' => 20,
+                
+            ],
+            [
+                'codigo_stock' => "155",
+                'farmacia_id' => 13,
+                'medicamento_id' => 22,
+                
+            ],
+            [
+                'codigo_stock' => "156",
+                'farmacia_id' => 14,
+                'medicamento_id' => 2,
+                
+            ],
+            [
+                'codigo_stock' => "157",
+                'farmacia_id' => 14,
+                'medicamento_id' => 7,
+                
+            ],
+            [
+                'codigo_stock' => "158",
+                'farmacia_id' => 14,
+                'medicamento_id' => 8,
+                
+            ],
+            [
+                'codigo_stock' => "159",
+                'farmacia_id' => 14,
+                'medicamento_id' => 11,
+                
+            ],
+            [
+                'codigo_stock' => "160",
+                'farmacia_id' => 14,
+                'medicamento_id' => 17,
+                
+            ],
+            [
+                'codigo_stock' => "161",
+                'farmacia_id' => 14,
+                'medicamento_id' => 18,
+                
+            ],
+            [
+                'codigo_stock' => "162",
+                'farmacia_id' => 14,
+                'medicamento_id' => 19,
+                
+            ],
+            [
+                'codigo_stock' => "163",
+                'farmacia_id' => 14,
+                'medicamento_id' => 20,
+                
+            ],
+            [
+                'codigo_stock' => "164",
+                'farmacia_id' => 14,
+                'medicamento_id' => 22,
+                
+            ],
+            [
+                'codigo_stock' => "165",
+                'farmacia_id' => 14,
+                'medicamento_id' => 23,
+                
+            ],
+            [
+                'codigo_stock' => "166",
+                'farmacia_id' => 15,
+                'medicamento_id' => 1,
+                
+            ],
+            [
+                'codigo_stock' => "167",
+                'farmacia_id' => 15,
+                'medicamento_id' => 3,
+                
+            ],
+            [
+                'codigo_stock' => "168",
+                'farmacia_id' => 15,
+                'medicamento_id' => 4,
+                
+            ],
+            [
+                'codigo_stock' => "169",
+                'farmacia_id' => 15,
+                'medicamento_id' => 6,
+                
+            ],
+            [
+                'codigo_stock' => "170",
+                'farmacia_id' => 15,
+                'medicamento_id' => 8,
+                
+            ],
+            [
+                'codigo_stock' => "171",
+                'farmacia_id' => 15,
+                'medicamento_id' => 9,
+                
+            ],
+            [
+                'codigo_stock' => "172",
+                'farmacia_id' => 15,
+                'medicamento_id' => 12,
+                
+            ],
+            [
+                'codigo_stock' => "173",
+                'farmacia_id' => 15,
+                'medicamento_id' => 13,
+                
+            ],
+            [
+                'codigo_stock' => "174",
+                'farmacia_id' => 15,
+                'medicamento_id' => 14,
+                
+            ],
+            [
+                'codigo_stock' => "175",
+                'farmacia_id' => 15,
+                'medicamento_id' => 15,
+                
+            ],
+            [
+                'codigo_stock' => "176",
+                'farmacia_id' => 15,
+                'medicamento_id' => 17,
+                
+            ],
+            [
+                'codigo_stock' => "177",
+                'farmacia_id' => 15,
+                'medicamento_id' => 18,
+                
+            ],
+            [
+                'codigo_stock' => "178",
+                'farmacia_id' => 15,
+                'medicamento_id' => 19,
+                
+            ],
+            [
+                'codigo_stock' => "179",
+                'farmacia_id' => 15,
+                'medicamento_id' => 21,
+                
+            ],
+            [
+                'codigo_stock' => "180",
+                'farmacia_id' => 15,
+                'medicamento_id' => 23,
+                
+            ],
+            [
+                'codigo_stock' => "181",
+                'farmacia_id' => 16,
+                'medicamento_id' => 1,
+                
+            ],
+            [
+                'codigo_stock' => "182",
+                'farmacia_id' => 16,
+                'medicamento_id' => 3,
+                
+            ],
+            [
+                'codigo_stock' => "183",
+                'farmacia_id' => 16,
+                'medicamento_id' => 5,
+                
+            ],
+            [
+                'codigo_stock' => "184",
+                'farmacia_id' => 16,
+                'medicamento_id' => 6,
+                
+            ],
+            [
+                'codigo_stock' => "185",
+                'farmacia_id' => 16,
+                'medicamento_id' => 8,
+                
+            ],
+            [
+                'codigo_stock' => "186",
+                'farmacia_id' => 16,
+                'medicamento_id' => 13,
+                
+            ],
+            [
+                'codigo_stock' => "187",
+                'farmacia_id' => 16,
+                'medicamento_id' => 15,
+                
+            ],
+            [
+                'codigo_stock' => "188",
+                'farmacia_id' => 16,
+                'medicamento_id' => 16,
+                
+            ],
+            [
+                'codigo_stock' => "189",
+                'farmacia_id' => 16,
+                'medicamento_id' => 17,
+                
+            ],
+            [
+                'codigo_stock' => "190",
+                'farmacia_id' => 16,
+                'medicamento_id' => 18,
+                
+            ],
+            [
+                'codigo_stock' => "191",
+                'farmacia_id' => 16,
+                'medicamento_id' => 19,
+                
+            ],
+            [
+                'codigo_stock' => "192",
+                'farmacia_id' => 16,
+                'medicamento_id' => 20,
+                
+            ],
+            [
+                'codigo_stock' => "193",
+                'farmacia_id' => 16,
+                'medicamento_id' => 22,
+                
+            ],
+            [
+                'codigo_stock' => "194",
+                'farmacia_id' => 16,
+                'medicamento_id' => 23,
+                
+            ],
+            [
+                'codigo_stock' => "195",
+                'farmacia_id' => 17,
+                'medicamento_id' => 1,
+                
+            ],
+            [
+                'codigo_stock' => "196",
+                'farmacia_id' => 17,
+                'medicamento_id' => 4,
+                
+            ],
+            [
+                'codigo_stock' => "197",
+                'farmacia_id' => 17,
+                'medicamento_id' => 5,
+                
+            ],
+            [
+                'codigo_stock' => "198",
+                'farmacia_id' => 17,
+                'medicamento_id' => 6,
+                
+            ],
+            [
+                'codigo_stock' => "199",
+                'farmacia_id' => 17,
+                'medicamento_id' => 7,
+                
+            ],
+            [
+                'codigo_stock' => "200",
+                'farmacia_id' => 17,
+                'medicamento_id' => 9,
+                
+            ],
+            [
+                'codigo_stock' => "201",
+                'farmacia_id' => 17,
+                'medicamento_id' => 10,
+                
+            ],
+            [
+                'codigo_stock' => "202",
+                'farmacia_id' => 17,
+                'medicamento_id' => 11,
+                
+            ],
+            [
+                'codigo_stock' => "203",
+                'farmacia_id' => 17,
+                'medicamento_id' => 13,
+                
+            ],
+            [
+                'codigo_stock' => "204",
+                'farmacia_id' => 17,
+                'medicamento_id' => 14,
+                
+            ],
+            [
+                'codigo_stock' => "205",
+                'farmacia_id' => 17,
+                'medicamento_id' => 16,
+                
+            ],
+            [
+                'codigo_stock' => "206",
+                'farmacia_id' => 17,
+                'medicamento_id' => 17,
+                
+            ],
+            [
+                'codigo_stock' => "207",
+                'farmacia_id' => 17,
+                'medicamento_id' => 19,
+                
+            ],
+            [
+                'codigo_stock' => "208",
+                'farmacia_id' => 17,
+                'medicamento_id' => 21,
+                
+            ],
+            [
+                'codigo_stock' => "209",
+                'farmacia_id' => 17,
+                'medicamento_id' => 22,
+                
+            ],
+            [
+                'codigo_stock' => "210",
+                'farmacia_id' => 17,
+                'medicamento_id' => 23,
+                
+            ],
+            [
+                'codigo_stock' => "211",
+                'farmacia_id' => 18,
+                'medicamento_id' => 1,
+                
+            ],
+            [
+                'codigo_stock' => "212",
+                'farmacia_id' => 18,
+                'medicamento_id' => 2,
+                
+            ],
+            [
+                'codigo_stock' => "213",
+                'farmacia_id' => 18,
+                'medicamento_id' => 3,
+                
+            ],
+            [
+                'codigo_stock' => "214",
+                'farmacia_id' => 18,
+                'medicamento_id' => 7,
+                
+            ],
+            [
+                'codigo_stock' => "215",
+                'farmacia_id' => 18,
+                'medicamento_id' => 9,
+                
+            ],
+            [
+                'codigo_stock' => "216",
+                'farmacia_id' => 18,
+                'medicamento_id' => 12,
+                
+            ],
+            [
+                'codigo_stock' => "217",
+                'farmacia_id' => 18,
+                'medicamento_id' => 13,
+                
+            ],
+            [
+                'codigo_stock' => "218",
+                'farmacia_id' => 18,
+                'medicamento_id' => 15,
+                
+            ],
+            [
+                'codigo_stock' => "219",
+                'farmacia_id' => 18,
+                'medicamento_id' => 20,
+                
+            ],
+            [
+                'codigo_stock' => "220",
+                'farmacia_id' => 18,
+                'medicamento_id' => 22,
+                
+            ],
+            [
+                'codigo_stock' => "221",
+                'farmacia_id' => 19,
+                'medicamento_id' => 2,
+            ],
+            [
+                'codigo_stock' => "222",
+                'farmacia_id' => 19,
+                'medicamento_id' => 3,
+            ],
+            [
+                'codigo_stock' => "223",
+                'farmacia_id' => 19,
+                'medicamento_id' => 5,
+            ],
+            [
+                'codigo_stock' => "224",
+                'farmacia_id' => 19,
+                'medicamento_id' => 6,
+            ],
+            [
+                'codigo_stock' => "225",
+                'farmacia_id' => 19,
+                'medicamento_id' => 8,
+            ],
+            [
+                'codigo_stock' => "226",
+                'farmacia_id' => 19,
+                'medicamento_id' => 9,
+            ],
+            [
+                'codigo_stock' => "227",
+                'farmacia_id' => 19,
+                'medicamento_id' => 10,
+            ],
+            [
+                'codigo_stock' => "228",
+                'farmacia_id' => 19,
+                'medicamento_id' => 11,
+            ],
+            [
+                'codigo_stock' => "229",
+                'farmacia_id' => 19,
+                'medicamento_id' => 14,
+            ],
+            [
+                'codigo_stock' => "230",
+                'farmacia_id' => 19,
+                'medicamento_id' => 18,
+            ],
+            [
+                'codigo_stock' => "231",
+                'farmacia_id' => 19,
+                'medicamento_id' => 19,
+            ],
+            [
+                'codigo_stock' => "232",
+                'farmacia_id' => 19,
+                'medicamento_id' => 20,
+            ],
+            [
+                'codigo_stock' => "233",
+                'farmacia_id' => 19,
+                'medicamento_id' => 21,
+            ],
+            [
+                'codigo_stock' => "234",
+                'farmacia_id' => 19,
+                'medicamento_id' => 22,
+            ],
+            [
+                'codigo_stock' => "235",
+                'farmacia_id' => 19,
+                'medicamento_id' => 23,
             ],
         ]);
 

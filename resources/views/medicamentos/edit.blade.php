@@ -33,13 +33,13 @@
                             <div>
                                 <x-label for="nombre" :value="__('Nombre')" />
 
-                                <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="$medicamento->nombre" required autofocus />
+                                <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" :value="old('nombre') ?? $medicamento->nombre" required autofocus />
                             </div>
 
                             <div>
                                 <x-label for="miligramos" :value="__('Dosis (mg.)')" />
 
-                                <x-input id="miligramos" class="block mt-1 w-full" type="number" step="50" name="miligramos" :value="$medicamento->miligramos" required />
+                                <x-input id="miligramos" class="block mt-1 w-full" type="number" step="50" name="miligramos" :value="old('miligramos') ?? $medicamento->miligramos" required />
                             </div>
 
                             <div class="flex items-center justify-end mt-4">

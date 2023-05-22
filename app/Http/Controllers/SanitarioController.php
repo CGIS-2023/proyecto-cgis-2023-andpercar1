@@ -23,6 +23,7 @@ class SanitarioController extends Controller
 
     public function index()
     {
+        $farmacias = Farmacia::all();
         $sanitarios = Sanitario::paginate(25);
         return view('/sanitarios/index', ['sanitarios' => $sanitarios]);
     }
@@ -44,17 +45,17 @@ class SanitarioController extends Controller
      * @param  \App\Http\Requests\StoreSanitarioRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSanitarioRequest $request)
+    public function store(Request $request)
     {
         $this->validate($request, [
             'nombre' => 'required|string|max:255',
             'apellidos' => 'required|string|max:225',
-            'telefono' => 'requires|string|max:9',
-            'DNI' => 'requires|string|max:9',
+            'telefono' => 'required|string|max:9',
+            'DNI' => 'required|string|max:9'
         ]);
         $sanitario = new Sanitario($request->all());
-        $medico->save();
-        session()->flash('success', 'Sanitario creado correctamente');
+        $sanitario->save();
+        session()->flash('success', 'Sanitario creado correctamente.');
         return redirect()->route('sanitarios.index');
     }
 
@@ -78,7 +79,7 @@ class SanitarioController extends Controller
     public function edit(Sanitario $sanitario)
     {
         $farmacias = Farmacia::all();
-        return view('sanitarios/edit', ['sanitario' => $sanitario]);
+        return view('sanitarios/edit', ['sanitario' => $sanitario], ['farmacias' => $farmacias]);
     }
 
     /**
@@ -118,4 +119,4 @@ class SanitarioController extends Controller
         }
         return redirect()->route('sanitarios.index');
     }
-}
+} 

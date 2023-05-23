@@ -77,7 +77,7 @@ class FarmaciaPolicy
      */
     public function restore(User $user, Farmacia $farmacia)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     /**
@@ -89,6 +89,6 @@ class FarmaciaPolicy
      */
     public function forceDelete(User $user, Farmacia $farmacia)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 }

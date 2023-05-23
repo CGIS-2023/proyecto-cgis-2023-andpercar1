@@ -23,6 +23,7 @@
                                 <th class="py-3 px-6 text-left">email</th>
                                 <th class="py-3 px-6 text-left">Telefono</th>
                                 <th class="py-3 px-6 text-left">Direccion</th>
+                                <th class="py-3 px-6 text-left">Medicamento</th>
                                 <th class="py-3 px-6 text-left"></th>
                             </tr>
                         </thead>
@@ -48,6 +49,11 @@
                                 <td class="py-3 px-6 text-left whitespace-nowrap">
                                     <div class="flex items-center">
                                         <span class="font-medium">{{$proveedor->direccion}} </span>
+                                    </div>
+                                </td>
+                                <td class="py-3 px-6 text-left whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <span class="font-medium">{{$proveedor->medicamento ? $proveedor->medicamento->nombre : __('Sin medicamento asociado')}}</span>
                                     </div>
                                 </td>
                                 <td class="py-3 px-6 text-center">

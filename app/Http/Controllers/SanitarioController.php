@@ -6,6 +6,8 @@ use App\Http\Requests\StoreSanitarioRequest;
 use App\Http\Requests\UpdateSanitarioRequest;
 use App\Models\Sanitario;
 use App\Models\Farmacia;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
 class SanitarioController extends Controller
@@ -25,7 +27,7 @@ class SanitarioController extends Controller
     {
         $farmacias = Farmacia::all();
         $sanitarios = Sanitario::paginate(25);
-        return view('/sanitarios/index', ['sanitarios' => $sanitarios]);
+        return view('/sanitarios/index', ['sanitarios' => $sanitarios], ['farmacias' => $farmacias]);
     }
 
     /**
@@ -53,7 +55,13 @@ class SanitarioController extends Controller
             'telefono' => 'required|string|max:9',
             'DNI' => 'required|string|max:9'
         ]);
+        $user = User::create([
+            'name' => Hash::make($request->name),
+            'email' => Hash::make($request->email),
+            'password' => Hash::make($request->password),
+        ]);
         $sanitario = new Sanitario($request->all());
+        $sanitario->user_id = $user->id;
         $sanitario->save();
         session()->flash('success', 'Sanitario creado correctamente.');
         return redirect()->route('sanitarios.index');

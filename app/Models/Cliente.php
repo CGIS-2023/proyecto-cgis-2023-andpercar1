@@ -18,7 +18,7 @@ class Cliente extends Model
         'direccion',
     ];
 
-    public function user(){
+    public function users(){
         return $this->belongsTo(User::class);
     }
 

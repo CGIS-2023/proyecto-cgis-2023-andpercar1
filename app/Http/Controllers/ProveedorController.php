@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 
 
 
+
 class ProveedorController extends Controller
 {
     /**
@@ -20,8 +21,9 @@ class ProveedorController extends Controller
      */
     public function index()
     {
+        $medicamentos = Medicamento::all();
         $proveedors = Proveedor::paginate(25);
-        return view('/proveedors/index', ['proveedors' => $proveedors]);
+        return view('/proveedors/index', ['proveedors' => $proveedors], ['medicamentos' => $medicamentos]);
     }
 
     /**
@@ -31,9 +33,10 @@ class ProveedorController extends Controller
      */
     public function create()
     {
-        return view('proveedors/create');
+        $medicamentos = Medicamento::all();
+        return view('proveedors/create', ['medicamentos' => $medicamentos]);
     }
-
+ 
     /**
      * Store a newly created resource in storage.
      *

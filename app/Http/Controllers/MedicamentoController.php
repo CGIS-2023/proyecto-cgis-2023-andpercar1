@@ -50,6 +50,8 @@ class MedicamentoController extends Controller
         return view('medicamentos/create', ['farmacias' => $farmacias]);
     }
 
+    
+
     /**
      * Store a newly created resource in storage.
      *

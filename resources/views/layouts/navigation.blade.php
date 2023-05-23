@@ -12,14 +12,24 @@
 
                <!-- Navigation Links -->
                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                            <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias.index') or request()->routeIs('farmacias.create') or request()->routeIs('farmacias.edit') or request()->routeIs('farmacias.show')">
-                                {{ __('Farmacias') }}
+                    @if(in_array(Auth::user()->tipo_usuario_id, [2]))
+                        <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias.index')">
+                            {{ __('Farmacias') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('medicamentos.index')" :active="request()->routeIs('medicamentos.index') or request()->routeIs('medicamentos.show')">
+                                {{ __('Medicamentos') }}
                             </x-nav-link>
-                            <x-nav-link :href="route('sanitarios.index')" :active="request()->routeIs('sanitarios.index') or request()->routeIs('sanitarios.create') or request()->routeIs('sanitarios.edit')">
-                                {{ __('Sanitarios') }}
+                    @endif
+                    @if(in_array(Auth::user()->tipo_usuario_id, [1,3]))
+
+                            <x-nav-link :href="route('farmacias.index')" :active="request()->routeIs('farmacias.index') or request()->routeIs('farmacias.create') or request()->routeIs('farmacias.edit')">
+                                {{ __('Farmacias') }}
                             </x-nav-link>
                             <x-nav-link :href="route('medicamentos.index')" :active="request()->routeIs('medicamentos.index') or request()->routeIs('medicamentos.create') or request()->routeIs('medicamentos.edit') or request()->routeIs('medicamentos.show')">
                                 {{ __('Medicamentos') }}
+                            </x-nav-link>
+                            <x-nav-link :href="route('sanitarios.index')" :active="request()->routeIs('sanitarios.index') or request()->routeIs('sanitarios.create') or request()->routeIs('sanitarios.edit')">
+                                {{ __('Sanitarios') }}
                             </x-nav-link>
                             <x-nav-link :href="route('clientes.index')" :active="request()->routeIs('clientes.index') or request()->routeIs('clientes.create') or request()->routeIs('clientes.edit')">
                                 {{ __('Clientes') }}
@@ -27,6 +37,7 @@
                             <x-nav-link :href="route('proveedors.index')" :active="request()->routeIs('proveedors.index') or request()->routeIs('proveedors.create') or request()->routeIs('proveedors.edit')">
                                 {{ __('Proveedores') }}
                             </x-nav-link>
+                    @endif
                 </div>
             </div>
 

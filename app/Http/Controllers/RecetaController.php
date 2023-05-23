@@ -28,7 +28,8 @@ class RecetaController extends Controller
     {
         $clientes = Cliente::all();
         $medicamentos = Medicamento::all();
-        return view('recetas/create', ['clientes' => $clientes], ['medicamentos' => $medicamentos]);
+        $sanitarios = Sanitario::all();
+        return view('recetas/create', ['cliente' => $clientes], ['medicamentos' => $medicamentos], ['sanitario' => $medicamentos]);
     }
 
     /**

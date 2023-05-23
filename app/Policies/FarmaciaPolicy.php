@@ -41,7 +41,7 @@ class FarmaciaPolicy
      */
     public function create(User $user)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     /**
@@ -53,7 +53,7 @@ class FarmaciaPolicy
      */
     public function update(User $user, Farmacia $farmacia)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     /**
@@ -65,7 +65,7 @@ class FarmaciaPolicy
      */
     public function delete(User $user, Farmacia $farmacia)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     /**

@@ -7,6 +7,8 @@ use App\Http\Requests\UpdateClienteRequest;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
 use App\Models\Farmacia;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class ClienteController extends Controller
 { 
@@ -53,6 +55,11 @@ class ClienteController extends Controller
             'telefono' => 'required|string|max:225',
             'num_seguridadsocial' => 'required|string|max:225',
             'direccion' => 'required|string|max:255'
+        ]);
+        $user = User::create([
+            'name' => Hash::make($request->name),
+            'email' => Hash::make($request->email),
+            'password' => Hash::make($request->password),
         ]);
         $cliente = new Cliente($request->all());
         $cliente->save();

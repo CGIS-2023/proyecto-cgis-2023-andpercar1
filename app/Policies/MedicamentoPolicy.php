@@ -41,7 +41,7 @@ class MedicamentoPolicy
      */
     public function create(User $user)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     /**
@@ -53,7 +53,7 @@ class MedicamentoPolicy
      */
     public function update(User $user, Medicamento $medicamento)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     /**
@@ -65,7 +65,7 @@ class MedicamentoPolicy
      */
     public function delete(User $user, Medicamento $medicamento)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     /**
@@ -77,7 +77,7 @@ class MedicamentoPolicy
      */
     public function restore(User $user, Medicamento $medicamento)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     /**
@@ -89,16 +89,16 @@ class MedicamentoPolicy
      */
     public function forceDelete(User $user, Medicamento $medicamento)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     public function attachFarmacia(User $user, Medicamento $medicamento)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 
     public function detachFarmacia(User $user, Medicamento $medicamento)
     {
-        return true;
+        return $user->tipo_usuario_id == 3;
     }
 }

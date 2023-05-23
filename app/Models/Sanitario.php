@@ -19,7 +19,7 @@ class Sanitario extends Model
         return $this->hasMany(Receta::class);
     }
 
-    public function user(){
+    public function users(){
         return $this->belongsTo(User::class);
     }
     

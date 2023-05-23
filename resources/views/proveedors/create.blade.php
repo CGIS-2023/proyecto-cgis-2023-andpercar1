@@ -53,6 +53,19 @@
                                 <x-input id="direccion" class="block mt-1 w-full" type="text" name="direccion" :value="old('Direccion')" required autofocus />
                             </div>
 
+                            <div class="mt-4">
+                                <x-label for="medicamento_id" :value="__('Medicamento')" />
+
+
+                                <x-select id="medicamento_id" name="medicamento_id" required>
+                                    <option value="">{{__('Elige una opción')}}</option>
+                                    @foreach ($medicamentos as $medicamento)
+                                    <option value="{{$medicamento->id}}" @if (old('medicamento_id') == $medicamento->id) selected @endif>{{$medicamento->nombre}}</option>
+                                    @endforeach
+                                </x-select>
+                            </div>
+
+
                             <div class="flex items-center justify-end mt-4">
                                 <x-button type="button" class="bg-red-800 hover:bg-red-700">
                                     <a href={{route('proveedors.index')}}>

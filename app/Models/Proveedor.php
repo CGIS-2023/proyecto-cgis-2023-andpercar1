@@ -9,12 +9,7 @@ class Proveedor extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nombre',
-        'email',
-        'telefono',
-        'direccion',
-    ];
+    protected $fillable = ['nombre', 'email', 'telefono', 'direccion', 'medicamento_id'];
 
     public function farmacias(){
         return $this->belongsToMany(Farmacia::class)->withPivot('fecha_pedido');

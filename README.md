@@ -120,5 +120,6 @@ Cada cliente puede tener varias farmacias asociadas y tendrá un usuario.
 8.	MODELO CONCEPTUAL UML:
 
  
+<img width="465" alt="image" src="https://github.com/CGIS-2023/proyecto-cgis-2023-andpercar1/assets/126070898/dc99cfda-2d38-4d33-aa14-8e0776650997">
 
 

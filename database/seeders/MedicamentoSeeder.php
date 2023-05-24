@@ -31,23 +31,23 @@ class MedicamentoSeeder extends Seeder
             ],
             [
                 'nombre'=> "Simvastatina",
-                'miligramos'=> 325
+                'miligramos'=> 725
             ],
             [
                 'nombre'=> "Lizipaina",
-                'miligramos'=> 325
+                'miligramos'=> 500
             ],
             [
                 'nombre'=> "Aspirina",
-                'miligramos'=> 325
+                'miligramos'=> 500
             ],
             [
                 'nombre'=> "Fortasec",
-                'miligramos'=> 325
+                'miligramos'=> 150
             ],
             [
                 'nombre'=> "Metamizol",
-                'miligramos'=> 325
+                'miligramos'=> 275
             ],
             [
                 'nombre'=> "Amoxicilina",
@@ -55,55 +55,55 @@ class MedicamentoSeeder extends Seeder
             ],
             [
                 'nombre'=> "Tramadol",
-                'miligramos'=> 325
+                'miligramos'=> 500
             ],
             [
                 'nombre'=> "Traumell",
-                'miligramos'=> 325
+                'miligramos'=> 1000
             ],
             [
                 'nombre'=> "Betadine",
-                'miligramos'=> 325
+                'miligramos'=> 575
             ],
             [
                 'nombre'=> "Lidocaina",
-                'miligramos'=> 325
+                'miligramos'=> 1000
             ],
             [
                 'nombre'=> "Valium",
-                'miligramos'=> 325
+                'miligramos'=> 250
             ],
             [
                 'nombre'=> "Omeprazol",
-                'miligramos'=> 325
+                'miligramos'=> 350
             ],
             [
                 'nombre'=> "Almax",
-                'miligramos'=> 325
+                'miligramos'=> 425
             ],
             [
                 'nombre'=> "Benadon",
-                'miligramos'=> 325
+                'miligramos'=> 125
             ],
             [
                 'nombre'=> "Lorazepan",
-                'miligramos'=> 325
+                'miligramos'=> 500
             ],
             [
                 'nombre'=> "Diazepan",
-                'miligramos'=> 325
+                'miligramos'=> 500
             ],
             [
                 'nombre'=> "Leracetina",
-                'miligramos'=> 325
+                'miligramos'=> 225
             ],
             [
                 'nombre'=> "Nolotil",
-                'miligramos'=> 325
+                'miligramos'=> 750
             ],
             [
                 'nombre'=> "Enantyum",
-                'miligramos'=> 325
+                'miligramos'=> 500
             ],
             [
                 'nombre'=> "Rinoebastel",
